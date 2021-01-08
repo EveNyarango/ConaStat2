@@ -19,4 +19,15 @@
         android:textSize="40sp"
         android:textStyle="italic"/>
 
+    <Button
+        android:id="@+id/FindCountryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find Country"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorAccent"
+        android:textColor="@color/black"/>
+
+
 </RelativeLayout>
