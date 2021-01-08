@@ -8,20 +8,29 @@ This is an android application that shows historical and realtime statistical da
 
 ## Installation
 Download and install Android SDK
+
 Download and install JAVA
+
 Clone or download this repository (link in the section below) to your local machine and run in ur code editor.
+
 Run the application on the emulator
 
 ## BDD
 Enter the continent
-Find country
+
+Find a country
+
 Navigate to the homepage with up button
 
 ## Technologies Used
 Java
+
 Android
 
 ## Demo
+![CON1](https://user-images.githubusercontent.com/70526252/104026835-91bf8b80-51d7-11eb-8707-38f7b6a0eeb5.jpeg)
+![CON2](https://user-images.githubusercontent.com/70526252/104026842-93894f00-51d7-11eb-9129-d0708b4611a7.jpeg)
+
 
 ## Link
 https://github.com/EveNyarango/ConaStat
