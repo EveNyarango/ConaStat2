@@ -19,6 +19,12 @@
         android:textSize="40sp"
         android:textStyle="italic"/>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/covid2"
+        android:scaleType="fitCenter"/>
     <Button
         android:id="@+id/FindCountryButton"
         android:layout_width="match_parent"
