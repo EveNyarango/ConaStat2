@@ -31,13 +31,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/teal_700"
-        android:layout_above="@id/FindCountryButton"
+        android:layout_above="@id/findCountryButton"
         android:layout_marginBottom="20dp"
         android:padding="5dp"
         android:hint="Enter continent"
         android:layout_centerHorizontal="true"/>
     <Button
-        android:id="@+id/FindCountryButton"
+        android:id="@+id/findCountryButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Find Country"

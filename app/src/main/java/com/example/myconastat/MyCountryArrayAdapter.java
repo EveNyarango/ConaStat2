@@ -2,13 +2,29 @@ package com.example.myconastat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
-public class MyCountryArrayAdapter extends AppCompatActivity {
+public class MyCountryArrayAdapter extends ArrayAdapter {
+    private Context mContext;
+    private String[] mCountry;
+    private String[] mContinent;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_country_array_adapter);
+    public MyCountryArrayAdapter(Context mContext, int resource, String[] mCountry, String[] mContinent){
+        super(mContext, resource);
+        this.mContext = mContext;
+        this.mCountry = mCountry;
+        this.mContinent = mContinent;
     }
+@Override
+    public Object getItem(int position){
+        String country = mCountry[position];
+        String continent = mContinent[position];
+        return String.format("%s \nServes great: %s", country, continent);
+}
+@Override
+    public int getCount() {
+        return mCountry.length;
+}
 }

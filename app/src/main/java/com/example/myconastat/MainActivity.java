@@ -2,27 +2,42 @@ package com.example.myconastat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
-@BindView(R.id.continentTextView) TextView mContinentTextView;
-@BindView(R.id.listview)  ListView mListView;
-private String[] countries = new String[] {"China", "Us", "Vietnam", "United Kingdom", "United Arab Emirates", "Ghana", "Kenya", "France", "Mexico", "Australia"};
-private String[] continents = new String[] {"Asia", "North America", "Asia","Europe", "Asia", "Africa", "Africa", "Europe", "North America", "Oceania"};
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+@BindView(R.id.findCountryButton)
+    Button mfindCountryButton;
+@BindView(R.id.continentEditText)
+    EditText mContinentEditText;
+@BindView(R.id.appNameTextView)
+TextView mAppNameTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mListView = (ListView) findViewById(R.id.listview);
-        mContinentTextView = (TextView) findViewById(R.id.continentTextView);
+        mfindCountryButton.setOnClickListener(this);
+    }
 
-        MyCountryArrayAdapter adapter
+    @Override
+    public void onClick(View v) {
+if(v == mfindCountryButton) {
+    String continent = mContinentEditText.getText().toString();
+    Intent intent = new Intent(MainActivity.this, CountryActivity.class);
+    intent.putExtra("continent", continent);
+    startActivity(intent);
+}
     }
 }
