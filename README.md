@@ -28,8 +28,8 @@ Java
 Android
 
 ## Demo
-![WhatsApp Image 2021-01-08 at 17 36 57 (1)](https://user-images.githubusercontent.com/70526252/104027411-67ba9900-51d8-11eb-9c81-fab5900f634f.jpeg)
-![WhatsApp Image 2021-01-08 at 17 36 57](https://user-images.githubusercontent.com/70526252/104027418-6ab58980-51d8-11eb-8f83-3f0b745143c6.jpeg)
+![WhatsApp Image 2021-01-08 at 17 36 57 (1)](https://user-images.githubusercontent.com/70526252/104027411-67ba9900-51d8-11eb-9c81-fab5900f634f.jpeg), ![WhatsApp Image 2021-01-08 at 17 36 57](https://user-images.githubusercontent.com/70526252/104027418-6ab58980-51d8-11eb-8f83-3f0b745143c6.jpeg)
+
 
 ## Link
 https://github.com/EveNyarango/ConaStat
