@@ -21,7 +21,7 @@ public class MyCountryArrayAdapter extends ArrayAdapter {
     public Object getItem(int position){
         String country = mCountry[position];
         String continent = mContinent[position];
-        return String.format("%s \nServes great: %s", country, continent);
+        return String.format("%s \n %s", country, continent);
 }
 @Override
     public int getCount() {

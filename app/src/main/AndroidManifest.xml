@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myconastat">
+    package="com.example.myconastat" >
 
     <application
         android:allowBackup="true"
@@ -8,10 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyConastat">
-        <activity android:name=".MyCountryArrayAdapter"></activity>
-        <activity android:name=".CountryActivity" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.MyConastat" >
+        <!-- <activity android:name=".MyCountryArrayAdapter"></activity> -->
+        <activity android:name=".CountryActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myconastat.MainActivity" >
+            </meta-data>
+        </activity>
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

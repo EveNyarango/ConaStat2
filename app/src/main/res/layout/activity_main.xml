@@ -11,13 +11,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="5dp"
         android:text="ConaStat"
         android:textColor="@color/teal_700"
         android:fontFamily="monospace"
-        android:textSize="40sp"
+        android:textSize="30sp"
+        android:padding="10dp"
         android:textStyle="italic"/>
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:layout_toRightOf="@+id/appNameTextView"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"/>
 
     <ImageView
         android:id="@+id/imageView"
