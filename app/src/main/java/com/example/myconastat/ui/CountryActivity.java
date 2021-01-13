@@ -1,4 +1,4 @@
-package com.example.myconastat;
+package com.example.myconastat.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.myconastat.MyCountryArrayAdapter;
+import com.example.myconastat.R;
 
 import butterknife.BindView;
 

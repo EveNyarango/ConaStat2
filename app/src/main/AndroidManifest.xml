@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyConastat" >
         <!-- <activity android:name=".MyCountryArrayAdapter"></activity> -->
-        <activity android:name=".CountryActivity" >
+        <activity android:name=".ui.CountryActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.myconastat.MainActivity" >
+                android:value="com.example.myconastat.ui.MainActivity" >
             </meta-data>
         </activity>
-        <activity android:name=".MainActivity" >
+        <activity android:name=".ui.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,15 +1,15 @@
-package com.example.myconastat;
+package com.example.myconastat.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.myconastat.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
