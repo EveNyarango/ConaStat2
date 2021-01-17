@@ -20,25 +20,24 @@
         android:padding="10dp"
         android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/aboutTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is android application that shows historical and realtime statistical data on COVID-19 from different country."
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:layout_below="@id/appNameTextView"
-        android:fontFamily="monospace"
-        android:textSize="15sp"
-        android:padding="10dp"
-        android:textStyle="italic"/>
+<!--    <TextView-->
+<!--        android:id="@+id/aboutTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="This is android application that shows historical and realtime statistical data on COVID-19 from different country."-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_below="@id/appNameTextView"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:textSize="15sp"-->
+<!--        android:padding="10dp"-->
+<!--        android:textStyle="italic"/>-->
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log in"
-        android:layout_below="@+id/aboutTextView"
         android:layout_centerHorizontal="true"
         android:paddingRight="100dp"
         android:layout_marginTop="10dp"

@@ -9,12 +9,12 @@ import retrofit2.http.Query;
 public interface CovidApi {
     @GET("cases")
     Call<CovidCases> getCases(
-            @Query("continent") String continent1,
-            @Query("country") String country1
+            @Query("continent") String continent,
+            @Query("country") String country
     );
 
 //    @GET("history")
-//    Call<YelpBusinessesSearchResponse> getHistory(
+//    Call<CovidCases> getHistory(
 //            @Query("country") String country2,
 //            @Query("status") String status,
 //            @Query("continent") String continent2

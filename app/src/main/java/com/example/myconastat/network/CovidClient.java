@@ -10,6 +10,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import com.example.myconastat.Constants;
 
 public class CovidClient {
     private static Retrofit retrofit = null;
@@ -27,7 +28,8 @@ public class CovidClient {
                     })
                     .build();
             retrofit = new Retrofit.Builder()
-                    .baseUrl("https://covid-api.mmediagroup.fr/v1")
+//                    .baseUrl("https://covid-api.mmediagroup.fr/v1/")
+                    .baseUrl(Constants.COVID_BASE_URL )
                     .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
