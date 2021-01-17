@@ -6,7 +6,7 @@ import java.util.List;
 public class CovidCases {
     @SerializedName("All")
     @Expose
-    private List<All> all;
+    private All all;
     /**
      * No args constructor for use in serialization
      *
@@ -17,14 +17,14 @@ public class CovidCases {
      *
      * @param all
      */
-    public CovidCases(List<All> all) {
+    public CovidCases(All all) {
         super();
         this.all = all;
     }
-    public List<All> getAll() {
+    public All getAll() {
         return all;
     }
-    public void setAll(List <All> all) {
+    public void setAll(All all) {
         this.all = all;
     }
 }

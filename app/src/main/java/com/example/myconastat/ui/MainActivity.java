@@ -34,9 +34,9 @@ TextView mAppNameTextView;
     @Override
     public void onClick(View v) {
 if(v == mfindCountryButton) {
-    String continent = mContinentEditText.getText().toString();
+    String country = mContinentEditText.getText().toString();
     Intent intent = new Intent(MainActivity.this, CountryActivity.class);
-    intent.putExtra("continent", continent);
+    intent.putExtra("country", country);
     startActivity(intent);
 }
     }

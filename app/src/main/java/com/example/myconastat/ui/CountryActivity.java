@@ -43,7 +43,9 @@ public class CountryActivity extends AppCompatActivity {
 
     private CountryListAdapter mAdapter;
 
-    private List<All> all;
+    private All all;
+    private CovidCases mCorona;
+    private List<CovidCases> mCoronaList = new ArrayList<CovidCases>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,20 +53,22 @@ public class CountryActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
-        String continent = intent.getStringExtra("continent");
+        String country = intent.getStringExtra("country");
 
 
         CovidApi client = CovidClient.getClient();
-        Call<CovidCases> call  = client.getCases(continent, "country");
+        Call<CovidCases> call  = client.getCases(country);
 
         call.enqueue(new Callback<CovidCases>() {
             @Override
             public void onResponse(Call<CovidCases> call, Response<CovidCases> response) {
                 hideProgressBar();
                 if (response.isSuccessful()) {
-                    all = response.body().getAll();
-                    Log.d(TAG, "onResponse:"+all);
-                    mAdapter = new CountryListAdapter(CountryActivity.this, all);
+                    All all = response.body().getAll();
+                    mCorona = new CovidCases(all);
+//                    mCorona.setAll.response.body();
+                    mCoronaList.add(mCorona);
+                    mAdapter = new CountryListAdapter(CountryActivity.this, mCoronaList);
                     mRecyclerView.setAdapter(mAdapter);
                     RecyclerView.LayoutManager layoutManager =
                             new LinearLayoutManager(CountryActivity.this);

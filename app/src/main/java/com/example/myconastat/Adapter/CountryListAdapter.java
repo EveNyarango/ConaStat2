@@ -13,26 +13,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myconastat.R;
 import com.example.myconastat.models.All;
+import com.example.myconastat.models.CovidCases;
 import com.example.myconastat.ui.CountryDetailActivity;
 
 import org.parceler.Parcels;
 
 
-
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.CountryViewHolder> {
-    private List<All> mAll;
+//    private List<All> mAll;
     private Context mContext;
+    private List <CovidCases> mCorona;
 
 
-
-    public CountryListAdapter( Context context, List<All>  all) {
-        mContext = context;
-        mAll = all;
+    public CountryListAdapter( Context mContext, List<CovidCases>  mCorona) {
+        this.mContext = mContext;
+        this.mCorona = mCorona;
     }
 
     @Override
@@ -44,7 +45,7 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
     }
 
     public void onBindViewHolder(CountryListAdapter.CountryViewHolder holder, int position) {
-        holder.bindAll(mAll.get(position));
+        holder.bindAll(mCorona.get(position));
     }
 
 //    @Override
@@ -54,7 +55,7 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
 
     @Override
     public int getItemCount() {
-       return mAll.size();
+       return mCorona.size();
     }
 
 
@@ -72,18 +73,19 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
             mContext = itemView.getContext();
         }
 
-        public void bindAll (All all) {
-            mNameTextView.setText(all.getCountry());
-            mConfirmedTextView.setText(all.getConfirmed());
-            mRecoveredTextView.setText(all.getRecovered());
-            mDeathTextView.setText(all.getDeaths());
+        public void bindAll (CovidCases corona) {
+            mNameTextView.setText(String.valueOf(corona.getAll().getCountry()));
+            mConfirmedTextView.setText(String.valueOf(corona.getAll().getConfirmed()));
+//            mCasesTextView.setText(String.valueOf(mCases.getAll().getConfirmed()));
+            mRecoveredTextView.setText(String.valueOf(corona.getAll().getRecovered()));
+            mDeathTextView.setText(String.valueOf(corona.getAll().getDeaths()));
         }
         @Override
         public void onClick(View v) {
             int itemPosition = getLayoutPosition();
             Intent intent = new Intent(mContext, CountryDetailActivity.class);
             intent.putExtra("continent", itemPosition);
-            intent.putExtra("country", Parcels.wrap(mAll));
+            intent.putExtra("country", Parcels.wrap(mCorona));
             mContext.startActivity(intent);
 
         }

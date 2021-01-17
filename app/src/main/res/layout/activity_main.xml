@@ -48,8 +48,8 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/covid2"
-        android:scaleType="fitCenter"/>
+        android:src="@drawable/covid3"
+        android:scaleType="centerCrop"/>
 
     <EditText
         android:id="@+id/continentEditText"
@@ -59,7 +59,7 @@
         android:layout_above="@id/findCountryButton"
         android:layout_marginBottom="20dp"
         android:padding="5dp"
-        android:hint="Enter continent"
+        android:hint="Enter country"
         android:layout_centerHorizontal="true"/>
     <Button
         android:id="@+id/findCountryButton"
