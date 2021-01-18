@@ -46,6 +46,7 @@
             android:layout_marginTop="22dp"
             android:textSize="20dp"
             android:text="Confirmed"
+            android:textColor="@color/teal_700"
             android:textStyle="italic" />
 
         <TextView
@@ -69,6 +70,7 @@
             android:layout_marginStart="196dp"
             android:layout_marginLeft="196dp"
             android:layout_marginTop="53dp"
+            android:textColor="@color/teal_700"
             android:text="Recovered"
             android:textStyle="italic"
             android:textSize="20dp"/>
@@ -94,6 +96,7 @@
             android:layout_marginStart="204dp"
             android:layout_marginLeft="204dp"
             android:layout_marginTop="52dp"
+            android:textColor="@color/teal_700"
             android:text="Deaths"
             android:textStyle="italic"
             android:textSize="20dp"/>

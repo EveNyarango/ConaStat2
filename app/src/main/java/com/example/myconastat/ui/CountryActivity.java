@@ -65,8 +65,8 @@ public class CountryActivity extends AppCompatActivity {
                 hideProgressBar();
                 if (response.isSuccessful()) {
                     All all = response.body().getAll();
+//                    Toast.makeText(CountryActivity.this,all.getCountry(),Toast.LENGTH_LONG).show();
                     mCorona = new CovidCases(all);
-//                    mCorona.setAll.response.body();
                     mCoronaList.add(mCorona);
                     mAdapter = new CountryListAdapter(CountryActivity.this, mCoronaList);
                     mRecyclerView.setAdapter(mAdapter);

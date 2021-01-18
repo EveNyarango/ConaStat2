@@ -28,7 +28,7 @@ public class CovidClient {
                     })
                     .build();
             retrofit = new Retrofit.Builder()
-                    .baseUrl("https://covid-api.mmediagroup.fr/v1/")
+//                    .baseUrl("https://covid-api.mmediagroup.fr/v1/")
                     .baseUrl(Constants.COVID_BASE_URL )
                     .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create())

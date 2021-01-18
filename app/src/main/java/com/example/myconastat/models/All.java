@@ -1,14 +1,12 @@
 
 package com.example.myconastat.models;
 
+import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import org.parceler.Parcel;
-
-@Parcel
-
-public class All {
+public class All implements Serializable
+{
 
     @SerializedName("confirmed")
     @Expose
@@ -58,6 +56,7 @@ public class All {
     @SerializedName("updated")
     @Expose
     private String updated;
+    private final static long serialVersionUID = 8279018218834417411L;
 
     /**
      * No args constructor for use in serialization
