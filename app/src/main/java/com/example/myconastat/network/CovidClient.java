@@ -17,20 +17,20 @@ public class CovidClient {
 
     public static CovidApi getClient() {
         if (retrofit == null){
-            OkHttpClient okHttpClient = new OkHttpClient.Builder()
-                    .addInterceptor(new Interceptor() {
-                        @Override
-                        public Response intercept(Chain chain) throws IOException {
-                            Request newRequest = chain.request().newBuilder()
-                                    .build();
-                            return chain.proceed(newRequest);
-                        }
-                    })
-                    .build();
-            retrofit = new Retrofit.Builder()
-//                    .baseUrl("https://covid-api.mmediagroup.fr/v1/")
-                    .baseUrl(Constants.COVID_BASE_URL )
-                    .client(okHttpClient)
+//            OkHttpClient okHttpClient = new OkHttpClient.Builder()
+//                    .addInterceptor(new Interceptor() {
+//                        @Override
+//                        public Response intercept(Chain chain) throws IOException {
+//                            Request newRequest = chain.request().newBuilder()
+//                                    .build();
+//                            return chain.proceed(newRequest);
+//                        }
+//                    })
+//                    .build();
+            retrofit = new Retrofit.Builder().baseUrl(Constants.COVID_BASE_URL )
+//
+
+//                    .client(okHttpClient)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }

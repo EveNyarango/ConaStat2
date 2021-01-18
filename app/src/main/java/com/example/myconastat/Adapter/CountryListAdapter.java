@@ -56,7 +56,7 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
 
 
     public class CountryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        @BindView(R.id.countryNameTextView) TextView mNameTextView;
+        @BindView(R.id.countryNameTextView) TextView mCountryNameTextView;
         @BindView(R.id.confirmedTextView) TextView mConfirmedTextView;
         @BindView(R.id.recoveredTextView) TextView mRecoveredTextView;
         @BindView(R.id.deathsTextView) TextView mDeathTextView;
@@ -68,11 +68,12 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
             mContext = itemView.getContext();
         }
 
-        public void bindAll (CovidCases corona) {
-            mNameTextView.setText(String.valueOf(corona.getAll().getCountry()));
-            mConfirmedTextView.setText(String.valueOf(corona.getAll().getConfirmed()));
-            mRecoveredTextView.setText(String.valueOf(corona.getAll().getRecovered()));
-            mDeathTextView.setText(String.valueOf(corona.getAll().getDeaths()));
+        public void bindAll (CovidCases mCorona) {
+//            mCountryNameTextView.setText(String.valueOf(mCorona.getAll().getCountry()));
+            mCountryNameTextView.setText(mCorona.getAll().getCountry());
+            mConfirmedTextView.setText(String.valueOf(mCorona.getAll().getConfirmed()));
+            mRecoveredTextView.setText(String.valueOf(mCorona.getAll().getRecovered()));
+            mDeathTextView.setText(String.valueOf(mCorona.getAll().getDeaths()));
         }
         @Override
         public void onClick(View v) {

@@ -39,13 +39,13 @@ public class CountryActivity extends AppCompatActivity {
     @BindView(R.id.recyclerView) RecyclerView mRecyclerView;
     @BindView(R.id.errorTextView) TextView mErrorTextView;
     @BindView(R.id.progressBar) ProgressBar mProgressBar;
-    public String continent1;
 
-    private CountryListAdapter mAdapter;
-
-    private All all;
+//    private All all;
     private CovidCases mCorona;
     private List<CovidCases> mCoronaList = new ArrayList<CovidCases>();
+    private CountryListAdapter mAdapter;
+
+    String country;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
