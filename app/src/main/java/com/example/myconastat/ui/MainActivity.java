@@ -28,16 +28,30 @@ TextView mAppNameTextView;
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        mfindCountryButton.setOnClickListener(this);
+//        mfindCountryButton.setOnClickListener(this);
+        mfindCountryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String country =  mContinentEditText.getText().toString();
+                Intent intent = new Intent(MainActivity.this, CountryActivity.class);
+                intent.putExtra("country", country);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
     public void onClick(View v) {
-if(v == mfindCountryButton) {
-    String country = mContinentEditText.getText().toString();
-    Intent intent = new Intent(MainActivity.this, CountryActivity.class);
-    intent.putExtra("country", country);
-    startActivity(intent);
-}
+
     }
+
+//    @Override
+//    public void onClick(View v) {
+//if(v == mfindCountryButton) {
+//    String country = mContinentEditText.getText().toString();
+//    Intent intent = new Intent(MainActivity.this, CountryActivity.class);
+//    intent.putExtra("country", country);
+//    startActivity(intent);
+//}
+//    }
 }

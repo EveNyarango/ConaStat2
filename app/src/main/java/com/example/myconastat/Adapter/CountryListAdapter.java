@@ -40,7 +40,6 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
     public CountryListAdapter.CountryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.country_list_item, parent, false);
         CountryViewHolder viewHolder = new CountryViewHolder(view);
-//        mCountry = new ArrayList<>();
         return viewHolder;
     }
 
@@ -48,10 +47,6 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
         holder.bindAll(mCorona.get(position));
     }
 
-//    @Override
-//    public int getItemCount() {
-//        return 0;
-//    }
 
     @Override
     public int getItemCount() {
@@ -76,17 +71,16 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
         public void bindAll (CovidCases corona) {
             mNameTextView.setText(String.valueOf(corona.getAll().getCountry()));
             mConfirmedTextView.setText(String.valueOf(corona.getAll().getConfirmed()));
-//            mCasesTextView.setText(String.valueOf(mCases.getAll().getConfirmed()));
             mRecoveredTextView.setText(String.valueOf(corona.getAll().getRecovered()));
             mDeathTextView.setText(String.valueOf(corona.getAll().getDeaths()));
         }
         @Override
         public void onClick(View v) {
-            int itemPosition = getLayoutPosition();
-            Intent intent = new Intent(mContext, CountryDetailActivity.class);
-            intent.putExtra("continent", itemPosition);
-            intent.putExtra("country", Parcels.wrap(mCorona));
-            mContext.startActivity(intent);
+//            int itemPosition = getLayoutPosition();
+//            Intent intent = new Intent(mContext, CountryDetailActivity.class);
+//            intent.putExtra("continent", itemPosition);
+//            intent.putExtra("country", Parcels.wrap(mCorona));
+//            mContext.startActivity(intent);
 
         }
     }

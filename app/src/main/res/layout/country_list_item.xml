@@ -1,55 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffff"
+        android:orientation="vertical"
         android:padding="10dp">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/countryNameTextView"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Country Name"
-            android:textColor="@color/colorPrimary"/>
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirmed"
-        android:id="@+id/confirmedTextView"
-        android:layout_below="@+id/countryNameTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textStyle="italic"/>
+
 
         <TextView
+            android:id="@+id/conTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recovered"
+            android:layout_below="@+id/countryNameTextView"
+            android:layout_marginTop="6dp"
+            android:textStyle="italic"
+            android:textColor="@color/teal_700"
+            android:textSize="30dp"
+            android:text="Confirmed:" />
+
+        <TextView
+            android:id="@+id/confirmedTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/countryNameTextView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="195dp"
+            android:layout_marginLeft="195dp"
+            android:layout_marginTop="22dp"
+            android:textSize="20dp"
+            android:text="Confirmed"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/recTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conTextView"
+            android:textStyle="italic"
+            android:textColor="@color/teal_700"
+            android:textSize="30dp"
+            android:layout_marginTop="34dp"
+            android:text="Recovered:" />
+
+        <TextView
             android:id="@+id/recoveredTextView"
-            android:layout_below="@+id/confirmedTextView"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:textStyle="italic"/>
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deaths"
-            android:id="@+id/deathsTextView"
             android:layout_below="@+id/confirmedTextView"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:textStyle="italic"/>
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="196dp"
+            android:layout_marginLeft="196dp"
+            android:layout_marginTop="53dp"
+            android:text="Recovered"
+            android:textStyle="italic"
+            android:textSize="20dp"/>
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/died"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recTextView"
+            android:textColor="@color/teal_700"
+            android:textSize="30dp"
+            android:layout_marginTop="36dp"
+            android:textStyle="italic"
+            android:text="Deaths:" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/deathsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recoveredTextView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="204dp"
+            android:layout_marginLeft="204dp"
+            android:layout_marginTop="52dp"
+            android:text="Deaths"
+            android:textStyle="italic"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
