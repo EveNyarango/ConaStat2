@@ -62,8 +62,9 @@ public class CountryActivity extends AppCompatActivity {
         call.enqueue(new Callback<CovidCases>() {
             @Override
             public void onResponse(Call<CovidCases> call, Response<CovidCases> response) {
-                hideProgressBar();
-                if (response.isSuccessful()) {
+                try {
+                    hideProgressBar();
+//                if (response.isSuccessful()) {
                     All all = response.body().getAll();
 //                    Toast.makeText(CountryActivity.this,all.getCountry(),Toast.LENGTH_LONG).show();
                     mCorona = new CovidCases(all);
@@ -76,10 +77,16 @@ public class CountryActivity extends AppCompatActivity {
                     mRecyclerView.setHasFixedSize(true);
 
                     showCountry();
-                } else {
-                    showUnsucessfulMessage();
                 }
-            }
+                catch (Exception e){
+                    System.out.println(e);
+                }
+                }
+
+//                 else {
+//                    showUnsucessfulMessage();
+//                }
+//            }
 
             @Override
             public void onFailure(Call<CovidCases> call, Throwable t) {

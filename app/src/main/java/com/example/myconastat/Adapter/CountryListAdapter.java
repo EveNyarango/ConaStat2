@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myconastat.R;
@@ -36,22 +37,40 @@ public class CountryListAdapter extends RecyclerView.Adapter<CountryListAdapter.
         this.mCorona = mCorona;
     }
 
+    @NonNull
     @Override
-    public CountryListAdapter.CountryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CountryListAdapter.CountryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.country_list_item, parent, false);
-        CountryViewHolder viewHolder = new CountryViewHolder(view);
-        return viewHolder;
+         CountryViewHolder viewHolder = new CountryViewHolder(view);
+         return viewHolder;
     }
 
-    public void onBindViewHolder(CountryListAdapter.CountryViewHolder holder, int position) {
+    @Override
+    public void onBindViewHolder(@NonNull CountryListAdapter.CountryViewHolder holder, int position) {
         holder.bindAll(mCorona.get(position));
     }
 
-
     @Override
     public int getItemCount() {
-       return mCorona.size();
+        return mCorona.size();
     }
+
+//    @Override
+//    public CountryListAdapter.CountryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+//        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.country_list_item, parent, false);
+//        CountryViewHolder viewHolder = new CountryViewHolder(view);
+//        return viewHolder;
+//    }
+
+//    public void onBindViewHolder(CountryListAdapter.CountryViewHolder holder, int position) {
+//        holder.bindAll(mCorona.get(position));
+//    }
+//
+
+//    @Override
+//    public int getItemCount() {
+//       return mCorona.size();
+//    }
 
 
 

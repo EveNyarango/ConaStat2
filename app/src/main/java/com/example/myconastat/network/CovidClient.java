@@ -15,6 +15,8 @@ import com.example.myconastat.Constants;
 public class CovidClient {
     private static Retrofit retrofit = null;
 
+    private static final String BASE_URL = Constants.COVID_BASE_URL;
+
     public static CovidApi getClient() {
         if (retrofit == null){
 //            OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -27,7 +29,7 @@ public class CovidClient {
 //                        }
 //                    })
 //                    .build();
-            retrofit = new Retrofit.Builder().baseUrl(Constants.COVID_BASE_URL )
+            retrofit = new Retrofit.Builder().baseUrl(BASE_URL )
 //
 
 //                    .client(okHttpClient)

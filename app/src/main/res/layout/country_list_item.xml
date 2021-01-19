@@ -101,6 +101,14 @@
             android:textStyle="italic"
             android:textSize="20dp"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deathsTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="Read More" />
+
     </RelativeLayout>
 
 </RelativeLayout>
